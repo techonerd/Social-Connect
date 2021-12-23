@@ -83,8 +83,8 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-SOCIAL_AUTH_GITHUB_KEY = '1e7cbfeb62760864058c'     # github id     
-SOCIAL_AUTH_GITHUB_SECRET = '29de51c9ddf08d304af3c77af4e810e19c4d88d3'  # github secret key
+SOCIAL_AUTH_GITHUB_KEY = os.environ.get('SOCIAL_AUTH_GITHUB_KEY')    # github id     
+SOCIAL_AUTH_GITHUB_SECRET =os.environ.get('SOCIAL_AUTH_GITHUB_SECRET')  # github secret key
 
 WSGI_APPLICATION = 'SocialConnect.wsgi.application'
 
