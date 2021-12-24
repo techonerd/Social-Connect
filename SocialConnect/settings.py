@@ -41,10 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # API
+    'api.apps.ApiConfig',
+    'corsheaders',
+    'rest_framework', 
     # third party apps
     'social_django',
     # Custom apps
-    'login.apps.LoginConfig',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,10 +59,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # CORS
+    'corsheaders.middleware.CorsMiddleware',
     # Heroku related middleware
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+CORS_ORIGIN_WHITELIST = ['https://localhost:3000',]
 ROOT_URLCONF = 'SocialConnect.urls'
 
 TEMPLATES = [
@@ -97,18 +104,18 @@ WSGI_APPLICATION = 'SocialConnect.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'ciba',
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': 'ciba',
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
