@@ -1,7 +1,7 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,django,python
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,linux,django,python
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,linux,django,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,linux,django,react
 
 ### Django ###
 *.log
@@ -12,7 +12,6 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
-*migrations*
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
@@ -231,6 +230,21 @@ cython_debug/
 
 # Cython debug symbols
 
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -250,7 +264,7 @@ cython_debug/
 # Support for Project snippet scope
 !.vscode/*.code-snippets
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,django,python
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,linux,django,react
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
