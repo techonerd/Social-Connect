@@ -108,6 +108,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'users': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'socialconnect_users',
+        },
+    'messages': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'socialconnect_messages',
     }
 }
 # DATABASES = {
