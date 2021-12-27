@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     # API
     'api.apps.ApiConfig',
     'corsheaders',
-    'rest_framework', 
+    'rest_framework',
+    'rest_framework.authtoken', 
     # third party apps
     'social_django',
     # Custom apps
